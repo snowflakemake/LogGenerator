@@ -20,7 +20,7 @@ user_agents = [fake.user_agent() for _ in range(10)]
 referers = args.referers
 
 def generate_log_entry(base_time):
-    ip = f"192.168.{random.randint(0, 255)}.{random.randint(1, 254)}"
+    ip = fake.ipv4()
     method = random.choice(methods)
     path = random.choice(paths)
     status = random.choice(status_codes)
